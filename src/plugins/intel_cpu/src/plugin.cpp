@@ -417,7 +417,7 @@ static Config::SnippetsMode getSnippetsMode(const std::map<std::string, std::str
 }
 
 static void setI64Mode(const std::map<std::string, std::string>& modelConfig, Config& engineConfig) {
-    engineConfig.enableNativeI64 = false;
+    engineConfig.enableNativeI64 = true;
     const auto i64prop = modelConfig.find(InferenceEngine::PluginConfigInternalParams::KEY_CPU_NATIVE_I64);
     if (i64prop != modelConfig.end()) {
         if (i64prop->second == PluginConfigParams::YES) {

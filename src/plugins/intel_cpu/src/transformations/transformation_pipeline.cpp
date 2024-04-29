@@ -203,7 +203,7 @@ void Transformations::PreLpt(const std::vector<ov::element::Type>& defaultPrecis
     if (useLpt) {
         CPU_REGISTER_PASS_COMMON(manager, ov::pass::MarkDequantizationSubgraph, defaultPrecisions);
     }
-    bool supportI64 = config.enableNativeI64;
+    bool supportI64 = true;
 
     auto get_convert_precisions = [&]() {
         precisions_map map = {

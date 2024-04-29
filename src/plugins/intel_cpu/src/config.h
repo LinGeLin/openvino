@@ -57,7 +57,7 @@ struct Config {
     // TODO: Executor cache may leads to incorrect behavior on oneDNN ACL primitives
     size_t rtCacheCapacity = 0ul;
 #endif
-    bool enableNativeI64 = false;
+    bool enableNativeI64 = true;
     InferenceEngine::IStreamsExecutor::Config streamExecutorConfig;
     InferenceEngine::PerfHintsConfig  perfHintsConfig;
     bool enableCpuPinning = true;
